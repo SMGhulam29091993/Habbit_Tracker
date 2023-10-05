@@ -3,6 +3,8 @@ const port = 8000;
 const app = express();
 
 const expressLayout = require('express-ejs-layouts');
+// importing the mongoose
+const db  = require('./config/mongoose')
 
 app.use(express.urlencoded());
 app.use(expressLayout);
