@@ -1,0 +1,10 @@
+*{
+    padding : 0;
+    margin : 0;
+}
+body{
+    height : 100vh;
+}
+nav{
+    height:10vh;
+}
