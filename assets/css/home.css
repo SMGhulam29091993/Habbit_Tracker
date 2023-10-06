@@ -1,0 +1,51 @@
+/* h1{
+    text-align: center;
+} */
+.create-habbit-formContainer{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+#createHabbitForm{
+    margin: 1rem auto;
+}
+.habbitContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.create-habbit-formContainer{
+    margin : auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+input#createHabbit{
+    outline : none;
+    border: none;
+    padding : 5px;
+    line-height: 0.9;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    border-radius: 20px 0 0 20px;
+    background-color: lightgray;
+}
+input#createHabbit::placeholder{
+    color : black;
+}
+.btn{
+    outline : none;
+    border: none;
+    padding : 10px;
+    line-height: 0.4;
+    font-weight: 600;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 0.4px;
+    border-radius: 0 20px 20px 0 ;
+    position : relative;
+    left: -4px;
+    top : -0.2px;
+    background-color: antiquewhite;
+}

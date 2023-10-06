@@ -6,10 +6,6 @@ header{
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: flex-start; /* Align items to the top */
-    margin: 1rem auto;
     height: 100%;
-}
-#header-container .create-habbit-form{
-    margin : 2rem auto;
-    
+    background-color: lightblue;
 }

@@ -1,8 +1,29 @@
+<link rel="stylesheet" href="/css/home.css">
+
 <section>
-   <h1>Home</h1>
-   <ul>
+    <h1>Habbits</h1>
+    <div class="create-habbit-formContainer">
+        <form action="/create-habbit" method="POST" id="createHabbitForm">
+            <input type="text" id="createHabbit" name="habbit" placeholder="Create habbit" required>
+            <button class="btn">Create</button>
+        </form>
+    </div>  
+    <ul class="habbitContainer">
     <% for(let h of habbit){%>
-        <li><%= h.habbit %></li>
+        <li>
+            <p><%= h.habbit %></p>
+            <div id="linkRoute">
+                <div class="updateHabbit">
+                    <a href="/update/habbit/<%= h._id %>">Update</a>
+                </div>
+                <div class="delete-button">
+                    <a href="/delete_task/?id=<%= h._id %>">
+                      <i class="fa-solid fa-trash"></i>
+                    </a>
+                </div>
+            </div>
+            
+        </li>
     <%}%>
    </ul>
 </section>
