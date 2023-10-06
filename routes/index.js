@@ -8,6 +8,6 @@ const updateHabbit_Controller =  require('../controllers/updateHabbit_controller
 router.get('/',homeController.home);
 router.post('/create-habbit',habbitController.create);
 router.get(`/update/habbit/:id` ,updateHabbit_Controller.update);
-
+router.get('/delete_habbit', habbitController.destroy);
 
 module.exports = router;

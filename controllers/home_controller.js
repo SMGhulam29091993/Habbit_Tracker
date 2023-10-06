@@ -7,7 +7,8 @@ module.exports.home = async (req, res) => {
         if (!habits || habits.length == 0) {
             // No habits found or an empty array of habits
             return res.render('home', {
-                title: 'Habbit Tracker'
+                title: 'Habbit Tracker',
+                habbit :[]
             });
         } else {
             // Render the "home" view with data

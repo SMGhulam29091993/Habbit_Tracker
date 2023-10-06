@@ -14,3 +14,20 @@ module.exports.create = async (req, res) => {
         return res.status(500).send("Error in creating the habit.");
     }
 };
+
+
+module.exports.destroy = async (req,res)=>{
+    try{
+        let habitID = req.query.id;
+        if(habitID){
+            await Habbit.findByIdAndDelete(habitID);
+            return res.redirect('back')
+        }
+        
+    }catch(err){
+        console.log(`Error in deleting the habit ${err}`);
+        return res.status(500).send('Habbit cannot be deleted')
+    }
+    
+
+}
