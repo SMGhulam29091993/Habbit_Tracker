@@ -3,7 +3,9 @@ const Habbit = require('../models/habbit');
 module.exports.home = async (req, res) => {
     try {
         let habits = await Habbit.find({}); // Corrected variable name to 'habits'
+
         console.log(habits)
+
         if (!habits || habits.length == 0) {
             // No habits found or an empty array of habits
             return res.render('home', {

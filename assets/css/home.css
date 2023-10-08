@@ -9,11 +9,11 @@
 #createHabbitForm{
     margin: 1rem auto;
 }
-.habbitContainer{
+/* #habbitContainer{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-}
+} */
 .create-habbit-formContainer{
     margin : auto; 
     display: flex;
