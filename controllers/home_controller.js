@@ -16,7 +16,8 @@ module.exports.home = async (req, res) => {
             // Render the "home" view with data
             return res.render('home', {
                 title: 'Habbit Tracker',
-                habbit: habits // Corrected variable name to 'habits'
+                habbit: habits ,
+                isHomePage : true
             });
         }
     } catch (err) {

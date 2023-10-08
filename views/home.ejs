@@ -10,20 +10,7 @@
     </div>  
     <ul id="habbitContainer">
     <% for(let h of habbit){%>
-        <li id="habbit-<%= h._id %>">
-            <p><%= h.habbit %></p>
-            <div id="linkRoute">
-                <div class="updateHabbit">
-                    <a href="/update/habbit/<%= h._id %>">Update</a>
-                </div>
-                <div >
-                    <a href="/delete_habbit/<%= h._id %>" class="delete-button">
-                      <i class="fa-solid fa-trash"></i>
-                    </a>
-                </div>
-            </div>
-            
-        </li>
+        <%- include("create_habbit", {h:h}) -%>
     <%}%>
    </ul>
 </section>

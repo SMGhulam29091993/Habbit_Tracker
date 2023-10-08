@@ -6,21 +6,14 @@ const habbitSchema = new  mongoose.Schema({
         type : String,
         require : true
     },
-    status : {
-        type : String,
-        require : true
-    },
-    streakCount : {
-        type : Number,
-    },
-    day : {
-        type : String,
-        require : true
-    },
-    date : {
-        type: String,
-        require : true
-    }
+    tracker : [
+        {
+            type : mongoose.Schema.ObjectId,
+            ref : 'Tracker'
+        }
+    ]
+}, {
+    timestamps : true
 })
 
 const Habbit = new mongoose.model('Habbit', habbitSchema);
