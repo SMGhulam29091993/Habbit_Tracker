@@ -9,10 +9,10 @@ $(document).ready(function () {
             type: 'POST',
             url: '/create-tracker', // Replace with your server route
             data: data,
-            success: function (response) {
+            success: function (data) {
                 // Handle success (e.g., update the table with the new tracker)
-                console.log('Tracker created successfully:', response);
-                updateTableWithNewTracker(response.data);
+                console.log('Tracker created successfully:', data);
+                updateTableWithNewTracker(data.data.tracker);
                 form.trigger('reset'); // Clear the form
             },
             error: function (error) {

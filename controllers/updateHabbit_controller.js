@@ -12,16 +12,18 @@ module.exports.update = async (req, res) => {
 
         let streakCount = 0; // Initialize streakCount
 
-        // Loop through the trackers and update streakCount based on status
         for (let tracker of habit.tracker) {
+            console.log(`Tracker Status: ${tracker.status}`);
             if (tracker.status === 'Done') {
                 streakCount++; // Increment streakCount for "done" trackers
-            } else if (tracker.status === 'Not-done') {
+            } else if (tracker.status === 'Not-Done') {
                 streakCount = 0; // Reset streakCount for "not-done" trackers
             }
+            console.log(`Streak Count: ${streakCount}`);
             tracker.streakCount = streakCount; // Update the streakCount of the tracker
             await tracker.save(); // Save the updated tracker
         }
+        
 
         // Render the updateHabbit view with habit data and updated trackers
         res.render('updateHabbit', {
