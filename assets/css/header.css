@@ -18,16 +18,16 @@ a{
 #header-container{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 h1{
     font-family: sans-serif;
-    margin: 1rem auto;
+    margin: 1rem;
     color: #fff;
 }
 h2{
     font-family: sans-serif;
-    margin: 1rem 2rem 1rem 1rem;
+    margin: 1rem;
     color: black;
     font-size: 1rem;
     align-self: center;
