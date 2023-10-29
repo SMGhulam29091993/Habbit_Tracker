@@ -1,0 +1,27 @@
+{
+  "name": "habbit_tracker",
+  "version": "1.0.0",
+  "description": "Skill-Tag-Test-1",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prod_start": "SOCIAL_ENVIRONMENT=production nodemon index.js",
+    "css": "gulp css",
+    "js": "gulp js"
+  },
+  "author": "Faiyaz",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-ejs-layouts": "^2.5.1",
+    "mongoose": "^6.10.1",
+    "morgan": "^1.10.0",
+    "node": "^20.7.0",
+    "node.js": "^0.0.1-security",
+    "nodemon": "^3.0.1",
+    "rotating-file-stream": "^3.1.1"
+  }
+}
