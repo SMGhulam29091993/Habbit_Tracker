@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 const env = require('./environment');
 
 // setting the url for database connection
-mongoose.connect(`mongodb://127.0.0.1:27017/${env.db}`);
-
+// mongoose.connect(`mongodb://127.0.0.1:27017/${env.db}`);
+mongoose.connect('mongodb+srv://smghulamghausfaiyaz19:Ghul@m29091993gh@u$@habbit-tracker.8klhauo.mongodb.net/?retryWrites=true&w=majority');
 // connecting rge db 
 const db = mongoose.connection;
 
