@@ -1,21 +1,22 @@
 const mongoose = require('mongoose');
 const env = require('./environment');
 
-// setting the url for database connection
-mongoose.connect(`${env.db}`,{
+// setting the URL for database connection
+mongoose.connect(`${env.db}`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
 
-// connecting rge db 
+// Set the 'strictQuery' option to false to handle the deprecation warning.
+mongoose.set('strictQuery', false);
+
+// Connecting to the database
 const db = mongoose.connection;
 
+// To check if there is any error in connecting the database
+db.on('error', console.error.bind(console, 'Error in connecting to the database'));
 
-// to check if there is any error in connecting the db
-db.on('Error', console.error.bind(console, 'Error in connecting the db'));
-
-
-// if the connection with db is established it console.log the msg
-db.once('open', ()=>{
-    console.log("The connection with database is established!");
-})
+// If the connection with the database is established, it logs a message.
+db.once('open', () => {
+    console.log('The connection with the database is established!');
+});
