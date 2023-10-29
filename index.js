@@ -1,7 +1,7 @@
 const express = require('express');
 const env = require('./config/environment');
 const logger = require('morgan');
-const port = 8000;
+const port = process.env.PORT || 8000;
 const app = express();
 
 const expressLayout = require('express-ejs-layouts');
