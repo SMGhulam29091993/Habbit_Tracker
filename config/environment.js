@@ -14,7 +14,7 @@ const accessLogStream = rfs.createStream('access.log',{
 const development = {
     name : 'development',
     asset_path : './assets',
-    db : 'mongodb+srv://smghulamghausfaiyaz19:Ghul@m29091993gh@u$@habbit-tracker.8klhauo.mongodb.net/?retryWrites=true&w=majority',
+    db : 'mongodb+srv://smghulamghausfaiyaz19:Ghul%40m29091993gh%40u%24@habbit-tracker.8klhauo.mongodb.net/?retryWrites=true&w=majority',
     morgan : {
         mode : 'dev',
         options : {stream : accessLogStream}
