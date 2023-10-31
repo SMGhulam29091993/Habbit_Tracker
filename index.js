@@ -1,9 +1,10 @@
 const express = require('express');
+// require('dotenv').config();
 const env = require('./config/environment');
 const logger = require('morgan');
-const port =  process.env.PORT || 8000;
+const port = 8000;
 const app = express();
-require('dotenv').config();
+
 
 const expressLayout = require('express-ejs-layouts');
 // importing the mongoose
