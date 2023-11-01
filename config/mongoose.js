@@ -3,7 +3,7 @@ require('dotenv').config();
 
 // setting the url for database connection
 mongoose.connect(process.env.MONGODB_URL);
-// mongoose.set('strictQuery', false);
+mongoose.set('strictQuery', false);
 
 // connecting rge db 
 const db = mongoose.connection;
