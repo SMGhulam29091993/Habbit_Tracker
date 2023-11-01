@@ -2,12 +2,12 @@ const mongoose = require('mongoose');
 const env = require('./environment');
 require('dotenv').config();
 
-const mongoURI = `mongodb://127.0.0.1:27017/${env.db}`;
-mongoose.connect(mongoURI);
-// setting the url for database connection
+// const mongoURI = `mongodb://127.0.0.1:27017/${env.db}`;
+mongoose.connect(MONGO_URI,{
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
 
-// mongoose.connect(process.env.MONGO_URI);
-// mongoose.set('strictQuery', false);
 
 // connecting rge db 
 const db = mongoose.connection;
